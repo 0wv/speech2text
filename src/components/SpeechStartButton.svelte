@@ -26,16 +26,19 @@
     }}
 ><pre><code>speech.start()</code></pre></button>
 {#each texts as text, i}
-    <textarea
-        bind:this={textareas[i]}
-        cols="30"
-        rows="10"
-    >{text}</textarea>
-    <button
-        class="px-4 py-2"
-        on:click={() => {
-            const data = textareas[i].value
-            navigator.clipboard.writeText(data)
-        }}
-    >コピー</button>
+    <div class="flex">
+        <textarea
+            bind:this={textareas[i]}
+            class="flex-1"
+            cols="30"
+            rows="10"
+        >{text}</textarea>
+        <button
+            class="flex-initial px-4 py-2"
+            on:click={() => {
+                const data = textareas[i].value
+                navigator.clipboard.writeText(data)
+            }}
+        >コピー</button>
+    </div>
 {/each}
