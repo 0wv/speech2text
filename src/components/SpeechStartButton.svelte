@@ -25,5 +25,5 @@
     }}
 ><pre><code>speech.start()</code></pre></button>
 {#each texts as text}
-    <div>{text}</div>
+    <textarea cols="30" rows="10">{text}</textarea>
 {/each}
