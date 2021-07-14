@@ -11,7 +11,7 @@
 		speech.stop()
 		if (e.results[0].isFinal) {
 			const text = e.results[0][0].transcript
-			datalist.push({
+			datalist.unshift({
                 text,
                 timeline: (new Date()).toLocaleTimeString()
             })
