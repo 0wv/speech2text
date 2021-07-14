@@ -17,28 +17,34 @@
 	}
 </script>
 
-<button
-    class="px-4 py-2"
-    {disabled}
-    on:click={() => {
-        speech.start()
-        disabled = true
-    }}
-><pre><code>speech.start()</code></pre></button>
+<div>
+    <button
+        class="px-4 py-2"
+        {disabled}
+        on:click={() => {
+            speech.start()
+            disabled = true
+        }}
+    ><pre><code>speech.start()</code></pre></button>
+</div>
 {#each texts as text, i}
     <div class="flex">
-        <textarea
-            bind:this={textareas[i]}
-            class="flex-1"
-            cols="30"
-            rows="10"
-        >{text}</textarea>
-        <button
-            class="flex-initial px-4 py-2"
-            on:click={() => {
-                const data = textareas[i].value
-                navigator.clipboard.writeText(data)
-            }}
-        >コピー</button>
+        <div class="flex-1">
+            <textarea
+                bind:this={textareas[i]}
+                class="h-full w-full"
+                cols="30"
+                rows="10"
+            >{text}</textarea>
+        </div>
+        <div class="flex-initial">
+            <button
+                class="h-full px-4 py-2 w-full"
+                on:click={() => {
+                    const data = textareas[i].value
+                    navigator.clipboard.writeText(data)
+                }}
+            >コピー</button>
+        </div>
     </div>
 {/each}
