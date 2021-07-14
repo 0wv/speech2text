@@ -7,7 +7,10 @@ module.exports = {
     content: [
       './src/**/*.svelte'
     ],
-    enabled: production
+    enabled: production,
+    safelist: [
+      'dark:bg-gray-900'
+    ]
   },
   darkMode: 'media', // or 'media' or 'class'
   theme: {
