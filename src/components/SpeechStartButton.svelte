@@ -33,8 +33,7 @@
             <textarea
                 bind:this={textareas[i]}
                 class="h-full w-full"
-                cols="30"
-                rows="10"
+                rows="5"
             >{text}</textarea>
         </div>
         <div class="flex-initial">
