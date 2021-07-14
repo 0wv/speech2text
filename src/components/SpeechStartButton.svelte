@@ -22,7 +22,7 @@
 
 <div>
     <button
-        class="px-4 py-2 w-full"
+        class="border-2 border-lime-500 dark:text-lime-300 px-4 py-2 rounded-2xl text-lime-900 w-full"
         {disabled}
         on:click={() => {
             speech.start()
@@ -32,19 +32,19 @@
 </div>
 {#each datalist as data, i}
     <div class="flex gap-2 my-2">
-        <div class="border flex flex-col flex-initial justify-center px-4 py-2">
-            <div>{data.timeline}</div>
+        <div class="border-2 border-lime-500 flex flex-col flex-initial justify-center px-4 py-2 rounded-2xl">
+            <div class="dark:text-lime-300 font-bold text-lime-900">{data.timeline}</div>
         </div>
         <div class="flex-1">
             <textarea
                 bind:this={textareas[i]}
-                class="h-full px-4 py-2 w-full"
+                class="border-2 border-lime-500 dark:bg-gray-900 dark:text-lime-300 h-full px-4 py-2 rounded-2xl text-lime-900 w-full"
                 rows="5"
             >{data.text}</textarea>
         </div>
         <div class="flex-initial">
             <button
-                class="h-full px-4 py-2 w-full"
+                class="border-2 border-lime-500 dark:text-lime-300 h-full px-4 py-2 rounded-2xl text-lime-900 w-full"
                 on:click={() => {
                     const data = textareas[i].value
                     navigator.clipboard.writeText(data)
