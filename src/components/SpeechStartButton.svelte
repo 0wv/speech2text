@@ -2,7 +2,7 @@
     let disabled = false
 	const speech = new webkitSpeechRecognition()
     let textareas = []
-	let texts = []
+	let datalist = []
 	speech.lang = 'ja_JP'
 	speech.onend = () => {
 		speech.start()
@@ -11,8 +11,11 @@
 		speech.stop()
 		if (e.results[0].isFinal) {
 			const text = e.results[0][0].transcript
-			texts.push(text)
-			texts = texts
+			datalist.push({
+                text,
+                timeline: (new Date()).toLocaleTimeString()
+            })
+			datalist = datalist
 		}
 	}
 </script>
@@ -27,17 +30,17 @@
         }}
     ><pre><code>speech.start()</code></pre></button>
 </div>
-{#each texts as text, i}
+{#each datalist as data, i}
     <div class="flex">
         <div class="border flex flex-col flex-initial justify-center px-4 py-2">
-            <div>{(new Date()).toLocaleTimeString()}</div>
+            <div>{data.timeline}</div>
         </div>
         <div class="flex-1">
             <textarea
                 bind:this={textareas[i]}
                 class="h-full px-4 py-2 w-full"
                 rows="5"
-            >{text}</textarea>
+            >{data.text}</textarea>
         </div>
         <div class="flex-initial">
             <button
