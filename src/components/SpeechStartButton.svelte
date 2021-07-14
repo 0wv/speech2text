@@ -31,7 +31,7 @@
     ><pre><code>speech.start()</code></pre></button>
 </div>
 {#each datalist as data, i}
-    <div class="flex">
+    <div class="flex gap-2 my-2">
         <div class="border flex flex-col flex-initial justify-center px-4 py-2">
             <div>{data.timeline}</div>
         </div>
