@@ -29,6 +29,9 @@
 </div>
 {#each texts as text, i}
     <div class="flex">
+        <div class="border flex flex-col flex-initial justify-center px-4 py-2">
+            <div>{(new Date()).toLocaleTimeString()}</div>
+        </div>
         <div class="flex-1">
             <textarea
                 bind:this={textareas[i]}
