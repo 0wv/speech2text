@@ -16,7 +16,9 @@ module.exports = {
   theme: {
     colors: {
       gray: colors.trueGray,
-      lime: colors.lime
+      lime: colors.lime,
+      rose: colors.rose,
+      sky: colors.sky
     },
     extend: {},
   },
