@@ -35,7 +35,7 @@
         <div class="flex-1">
             <textarea
                 bind:this={textareas[i]}
-                class="h-full w-full"
+                class="h-full px-4 py-2 w-full"
                 rows="5"
             >{text}</textarea>
         </div>
