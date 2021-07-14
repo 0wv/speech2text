@@ -46,7 +46,7 @@
             </div>
             <div class="flex-initial">
                 <button
-                    class="border-2 border-lime-500 dark:text-lime-300 h-full px-4 py-2 rounded-2xl text-lime-900 w-full"
+                    class="border-2 border-rose-500 dark:text-rose-300 h-full px-4 py-2 rounded-2xl text-rose-900 w-full"
                     on:click={() => {
                         datalist[i].hidden = true
                     }}
@@ -54,7 +54,7 @@
             </div>
             <div class="flex-auto sm:flex-initial">
                 <button
-                    class="border-2 border-lime-500 dark:text-lime-300 h-full px-4 py-2 rounded-2xl text-lime-900 w-full"
+                    class="border-2 border-sky-500 dark:text-sky-300 h-full px-4 py-2 rounded-2xl text-sky-900 w-full"
                     on:click={() => {
                         const data = textareas[i].value
                         navigator.clipboard.writeText(data)
