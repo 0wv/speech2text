@@ -19,7 +19,7 @@
 
 <div>
     <button
-        class="px-4 py-2"
+        class="px-4 py-2 w-full"
         {disabled}
         on:click={() => {
             speech.start()
