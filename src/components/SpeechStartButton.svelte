@@ -25,7 +25,7 @@
 
 <div>
     <button
-        class="border-2 border-lime-500 dark:text-lime-300 hover:bg-lime-500 px-4 py-2 rounded-2xl text-lime-900 w-full"
+        class="border-2 border-lime-500 dark:text-lime-300 duration-100 hover:bg-lime-500 px-4 py-2 rounded-2xl text-lime-900 transition w-full"
         {disabled}
         on:click={() => {
             speech.start()
@@ -51,7 +51,7 @@
         </div>
         <div class="flex-initial">
             <button
-                class="border-2 border-rose-500 dark:text-rose-300 h-full hover:bg-rose-500 px-4 py-2 rounded-2xl text-rose-900 w-full"
+                class="border-2 border-rose-500 dark:text-rose-300 duration-100 h-full hover:bg-rose-500 px-4 py-2 rounded-2xl text-rose-900 transition w-full"
                 on:click={() => {
                     datalist.splice(i, 1)
                     datalist = datalist
@@ -60,7 +60,7 @@
         </div>
         <div class="flex-auto sm:flex-initial">
             <button
-                class="border-2 border-sky-500 dark:text-sky-300 h-full hover:bg-sky-500 px-4 py-2 rounded-2xl text-sky-900 w-full"
+                class="border-2 border-sky-500 dark:text-sky-300 duration-100 h-full hover:bg-sky-500 px-4 py-2 rounded-2xl text-sky-900 transition w-full"
                 on:click={() => {
                     const data = textareas[i].value
                     navigator.clipboard.writeText(data)
