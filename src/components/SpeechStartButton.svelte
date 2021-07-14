@@ -33,11 +33,11 @@
 </div>
 {#each datalist as data, i}
     {#if !datalist[i].hidden}
-        <div class="flex gap-2 my-2">
+        <div class="border-2 border-lime-500 flex flex-wrap gap-2 my-2 p-2 rounded-2xl sm:border-0 sm:flex-nowrap sm:p-0 sm:rounded-none">
             <div class="border-2 border-lime-500 flex flex-col flex-initial justify-center px-4 py-2 rounded-2xl">
                 <div class="dark:text-lime-300 font-bold text-lime-900">{data.timeline}</div>
             </div>
-            <div class="flex-1">
+            <div class="flex-auto sm:flex-1">
                 <textarea
                     bind:this={textareas[i]}
                     class="border-2 border-lime-500 dark:bg-gray-900 dark:text-lime-300 h-full px-4 py-2 rounded-2xl text-lime-900 w-full"
@@ -52,7 +52,7 @@
                     }}
                 >削除</button>
             </div>
-            <div class="flex-initial">
+            <div class="flex-auto sm:flex-initial">
                 <button
                     class="border-2 border-lime-500 dark:text-lime-300 h-full px-4 py-2 rounded-2xl text-lime-900 w-full"
                     on:click={() => {
