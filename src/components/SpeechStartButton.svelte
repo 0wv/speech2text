@@ -39,10 +39,10 @@
         class="border-2 border-lime-500 flex flex-wrap gap-2 my-2 p-2 rounded-2xl sm:border-0 sm:flex-nowrap sm:p-0 sm:rounded-none"
         in:fly={{ duration: 100, x: -200 }}
     >
-        <div class="border-2 border-lime-500 flex flex-col flex-initial justify-center px-4 py-2 rounded-2xl">
+        <div class="border-2 border-lime-500 flex flex-auto flex-col justify-center px-4 py-2 rounded-2xl sm:flex-initial text-center">
             <div class="dark:text-lime-300 font-bold text-lime-900">{data.timeline}</div>
         </div>
-        <div class="flex-auto sm:flex-1">
+        <div class="flex-auto sm:flex-1 w-full">
             <textarea
                 bind:this={textareas[i]}
                 class="border-2 border-lime-500 dark:bg-gray-900 dark:text-lime-300 h-full px-4 py-2 rounded-2xl text-lime-900 w-full"
