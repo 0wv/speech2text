@@ -5,7 +5,6 @@
 	const speech = new webkitSpeechRecognition()
     let textareas = []
 	let datalist = []
-	speech.lang = 'ja_JP'
 	speech.onend = () => {
 		speech.start()
 	}
